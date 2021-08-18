@@ -1,35 +1,32 @@
-# 1. Write a function named `sum_to` that accepts a single integer, `n`, and returns the sum of the integers from 1 to `n`.
+# 1. Write a function named `sum_to` that accepts a single integer, `n`, 
+#     and returns the sum of the integers from 1 to `n`.
 
-#     For example:
+def sum_to(n):
+  sum = 0
+  for num in range(1, n + 1):
+    sum += num
+  return sum
 
-#     ```python
-#     sum_to(6)  # returns 21
-#     sum_to(10) # returns 55
-#     ```
-
-
-
-
-
+print(sum_to(6))
+print(sum_to(10))
 
 
+# 2. Write a function named `largest` that takes a list of numbers as an argument 
+#     and returns the largest number in that list.
 
-# 2. Write a function named `largest` that takes a list of numbers as an argument and returns the largest number in that list.
+def largest(numbers):
+  largestNum = 0
+  for num in numbers:
+    if num > largestNum:
+      largestNum = num
+  return largestNum
 
-#     For example:
-
-#     ```python
-#     largest([1, 2, 3, 4, 0])  # returns 4
-#     largest([10, 4, 2, 231, 91, 54])  # returns 231
-#     ```
-
-
-
-
-
+print(largest([1,2,3,4,5]))
+print(largest([2,10,25,50,100]))
 
 
-# 3. Write a function named `occurances` that takes two string arguments as input and counts the number of occurances of the second string inside the first string.
+# 3. Write a function named `occurances` that takes two string arguments as input
+#     and counts the number of occurances of the second string inside the first string.
 
 #     For example:
 
@@ -46,7 +43,8 @@
 
 
 
-# 4. Write a function named `product` that takes an *arbitrary* number of numbers, multiplies them all together, and returns the product. HINT: Review your notes on `args`.
+# 4. Write a function named `product` that takes an *arbitrary* number of numbers,
+#     multiplies them all together, and returns the product. HINT: Review your notes on `args`.
 
 #     For example:
 
