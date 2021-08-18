@@ -37,11 +37,15 @@ print(largest([2,10,25,50,100]))
 #     occurances('fleep floop', 'fe')  # returns 0
 #     ```
 
+def occurances(bigString, lilString):
+  removedLilStrings = bigString.replace(lilString, '')
+  # "//" is floor division, removes remainder
+  return (len(bigString) - len(removedLilStrings)) // len(lilString)
 
-
-
-
-
+print(occurances('fleep floop', 'e'))
+print(occurances('fleep floop', 'p'))
+print(occurances('fleep floop', 'ee'))
+print(occurances('fleep floop', 'fe'))
 
 # 4. Write a function named `product` that takes an *arbitrary* number of numbers,
 #     multiplies them all together, and returns the product. HINT: Review your notes on `args`.
