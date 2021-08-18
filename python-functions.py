@@ -47,6 +47,7 @@ print(occurances('fleep floop', 'p'))
 print(occurances('fleep floop', 'ee'))
 print(occurances('fleep floop', 'fe'))
 
+
 # 4. Write a function named `product` that takes an *arbitrary* number of numbers,
 #     multiplies them all together, and returns the product. HINT: Review your notes on `args`.
 
@@ -58,9 +59,12 @@ print(occurances('fleep floop', 'fe'))
 #     product(4, 0.5, 5) # returns 10.0
 #     ```
 
+def product(*nums):
+  total = 1
+  for num in nums:
+    total *= num
+  return total
 
-
-
-
-
-
+print(product(-1, 4))
+print(product(2, 5, 5))
+print(product(4, 0.5, 5))
